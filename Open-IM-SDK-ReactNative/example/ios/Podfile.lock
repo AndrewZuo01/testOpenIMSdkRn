@@ -679,7 +679,7 @@ SPEC CHECKSUMS:
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 81191603c4eaa01f5e4ae5737a9efcf64756c7b2
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
-  open-im-sdk-rn: e1beae98bc3d09e7468c806e41eb99d04f633bcb
+  open-im-sdk-rn: eea6354e491f5bb5c6f92deab87bb1649893aca9
   OpenIMSDKCore: 95efffa47238c496566e5397af3933827361ba00
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1

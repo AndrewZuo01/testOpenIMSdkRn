@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm}"
   # s.vendored_frameworks = "ios/Frameworks/*.framework"
   # s.preserve_path = "ios/Frameworks/"
-  
+  s.static_framework = true
   s.dependency "React-Core"
   s.dependency "OpenIMSDKCore","3.2.0"
 end

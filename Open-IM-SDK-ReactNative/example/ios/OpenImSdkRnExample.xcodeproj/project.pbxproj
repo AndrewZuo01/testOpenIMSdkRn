@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; settings = {COMPILER_FLAGS = "-fcxx-modules"; }; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; settings = {COMPILER_FLAGS = "-fcxx-modules"; }; };
+		324B9DB50D0BFA226B0E8AB0 /* libPods-OpenImSdkRnExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 861A7FCEB8F5E8F0C37B1763 /* libPods-OpenImSdkRnExample.a */; };
 		4978F5E72A98814900A5D589 /* libopen-im-sdk-rn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4978F5E62A98814900A5D589 /* libopen-im-sdk-rn.a */; };
 		4978F5E92A9881CD00A5D589 /* libopen-im-sdk-rn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4978F5E82A9881CD00A5D589 /* libopen-im-sdk-rn.a */; };
 		4978F5EB2A9889EF00A5D589 /* OpenIMCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4978F5EA2A9889EF00A5D589 /* OpenIMCore.xcframework */; };
@@ -82,6 +83,7 @@
 				4978F5E92A9881CD00A5D589 /* libopen-im-sdk-rn.a in Frameworks */,
 				4978F5E72A98814900A5D589 /* libopen-im-sdk-rn.a in Frameworks */,
 				4978F5EB2A9889EF00A5D589 /* OpenIMCore.xcframework in Frameworks */,
+				324B9DB50D0BFA226B0E8AB0 /* libPods-OpenImSdkRnExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
