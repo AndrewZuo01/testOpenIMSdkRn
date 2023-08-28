@@ -1,12 +1,17 @@
+@import OpenIMCore;
+#import "CallbackProxy.h"
 
-#ifdef RCT_NEW_ARCH_ENABLED
-#import "RNOpenImSdkRnSpec.h"
-
-@interface OpenImSdkRn : NSObject <NativeOpenImSdkRnSpec>
+#if __has_include("RCTBridgeModule.h")
+#import "RCTBridgeModule.h"
+#import "RCTEventEmitter.h"
 #else
 #import <React/RCTBridgeModule.h>
-
-@interface OpenImSdkRn : NSObject <RCTBridgeModule>
+#import <React/RCTEventEmitter.h>
 #endif
 
+@interface OpenIMSDKRN : RCTEventEmitter <RCTBridgeModule,Open_im_sdk_callbackOnConnListener,Open_im_sdk_callbackOnUserListener, Open_im_sdk_callbackOnAdvancedMsgListener, Open_im_sdk_callbackOnFriendshipListener, Open_im_sdk_callbackOnConversationListener, Open_im_sdk_callbackOnGroupListener,Open_im_sdk_callbackOnSignalingListener>
+
+- (void)pushEvent:(NSString *) eventName errCode:(NSNumber *) errCode errMsg:(NSString *) errMsg data:(NSString *) data;
+
 @end
+  

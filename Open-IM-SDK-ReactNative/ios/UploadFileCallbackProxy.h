@@ -12,9 +12,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RNUploadFileCallbackProxy : NSObject <Open_im_sdk_callbackUploadFileCallBack>
+@interface RNUploadFileCallbackProxy : NSObject <Open_im_sdk_callbackUploadFileCallback>
 
-- (id)initWithMessage:(NSString *)msg module:(OpenIMSDKRN *)module resolver:(RCTPromiseResolveBlock)resolver rejecter:(RCTPromiseRejectBlock)rejecter;
+- (id)initWithOpid:(NSString *)operationID module:(OpenIMSDKRN *)module resolver:(RCTPromiseResolveBlock)resolver rejecter:(RCTPromiseRejectBlock)rejecter;
 
 @end
 

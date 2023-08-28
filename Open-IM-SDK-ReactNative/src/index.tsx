@@ -1,13 +1,13 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeEventEmitter, NativeModules, Platform } from 'react-native';
 
 const LINKING_ERROR =
   `The package 'open-im-sdk-rn' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
+  '- You are not using Expo managed workflow\n';
 
-const OpenImSdkRn = NativeModules.OpenImSdkRn
-  ? NativeModules.OpenImSdkRn
+const OpenIMSDKRN = NativeModules.OpenIMSDKRN
+  ? NativeModules.OpenIMSDKRN
   : new Proxy(
       {},
       {
@@ -17,6 +17,6 @@ const OpenImSdkRn = NativeModules.OpenImSdkRn
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return OpenImSdkRn.multiply(a, b);
-}
+export const OpenIMEmitter = new NativeEventEmitter(OpenIMSDKRN);
+
+export default OpenIMSDKRN
