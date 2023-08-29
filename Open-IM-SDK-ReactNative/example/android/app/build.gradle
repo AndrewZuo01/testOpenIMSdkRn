@@ -72,7 +72,8 @@ android {
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
-
+    buildToolsVersion "30.0.3"
+    
     namespace "com.openimsdkrnexample"
     defaultConfig {
         applicationId "com.openimsdkrnexample"

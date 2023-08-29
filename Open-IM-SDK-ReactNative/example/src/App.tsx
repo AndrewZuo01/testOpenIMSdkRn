@@ -21,6 +21,9 @@ export default function App() {
     OpenIMEmitter.addListener('onConnectFailed', (v) => {
       console.log(v);
     });
+    OpenIMEmitter.addListener('onNewConversation', (v) => {
+      console.log(v);
+    });
     OpenIMEmitter.addListener('onConversationChanged', (v) => {
       console.log('cve changed:::');
       console.log(v);
@@ -39,8 +42,8 @@ export default function App() {
     await RNFS.mkdir(RNFS.DocumentDirectoryPath + '/tmp');
     const config = {
       platformID: 5,
-      apiAddr: 'https://www.openim.cc/api',
-      wsAddr: 'wss://www.openim.cc/msg_gateway',
+      apiAddr: 'https://web.rentsoft.cn/api',
+      wsAddr: 'wss://web.rentsoft.cn/msg_gateway',
       dataDir: RNFS.DocumentDirectoryPath + '/tmp',
       logLevel: 6,
       isLogStandardOutput: true,
@@ -57,9 +60,9 @@ export default function App() {
 
   const Login = async () => {
     const tk =
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMTYzMTQ1NDc3IiwiUGxhdGZvcm1JRCI6NSwiZXhwIjoxNzAwOTg4MDY4LCJuYmYiOjE2OTMyMTE3NjgsImlhdCI6MTY5MzIxMjA2OH0.Omr12clPwFTWkPWHGwJUEav7872wkrCAnauWTVVXPE0';  
-    const options = {
-      userID: '3163145477',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI2OTYwNTYyODA1IiwiUGxhdGZvcm1JRCI6NSwiZXhwIjoxNzAxMDY5OTM0LCJuYmYiOjE2OTMyOTM2MzQsImlhdCI6MTY5MzI5MzkzNH0.n9HvwQDA99eoCfkivB20m8byubN-_dcllBdsC9raOYs'
+      const options = {
+      userID: '6960562805',
       token: tk,
     };
     try {
@@ -87,7 +90,7 @@ export default function App() {
 
   const GetUsersInfo = async () => {
     try {
-      const data = await OpenIMSDKRN.getUsersInfo(['3163145477'], uuid());
+      const data = await OpenIMSDKRN.getUsersInfo(['6960562805'], uuid());
       console.log(data);
     }catch (error) {
       console.error('Error GetUsersInfo:', error); // Log the error
@@ -146,7 +149,7 @@ export default function App() {
     }
     const options = {
       message:text,
-      recvID:'5518381900',
+      recvID:'7440671006',
       groupID:'',
       offlinePushInfo
     }
